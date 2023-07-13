@@ -61,7 +61,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                         style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(bottom: 16, top: 50),
+                                        padding: const EdgeInsets.only(bottom: 16, top: 30),
                                         child: TextFormField(
                                           controller: nameController,
                                           decoration: InputDecoration(
@@ -107,7 +107,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(bottom: 80),
+                                        padding: const EdgeInsets.only(bottom: 8),
                                         child: TextFormField(
                                           decoration: InputDecoration(
                                             border: OutlineInputBorder(
@@ -129,24 +129,64 @@ class _SignUpPageState extends State<SignUpPage> {
                                         ),
                                       ),
 
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        children: [
+                                        TextButton(
+                                          child: Text(
+                                            "Forgot password?",
+                                            style: TextStyle(
+                                                fontSize: 16
+                                            ),
+                                          ),
+                                           onPressed: () {  },
 
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          // Action for sign up button
-                                        },
-                                        style: ElevatedButton.styleFrom(
-                                          primary: Color(0xFF21C69F),
-                                          onPrimary: Colors.white,
-                                          minimumSize: Size(double.infinity, 50),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(10.0),
+                                        )
+                                        ],
+                                      ),
+
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 10, bottom: 10),
+                                        child: ElevatedButton(
+                                          onPressed: () {
+                                            // Action for sign up button
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            primary: Color(0xFF21C69F),
+                                            onPrimary: Colors.white,
+                                            minimumSize: Size(double.infinity, 50),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(10.0),
+                                            ),
+                                          ),
+                                          child: Text(
+                                            'Sign Up',
+                                            style: TextStyle(fontSize: 20),
                                           ),
                                         ),
-                                        child: Text(
-                                          'Sign Up',
-                                          style: TextStyle(fontSize: 20),
-                                        ),
                                       ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "Already have an account?",
+                                            style: TextStyle(
+                                                fontSize: 16
+                                            ),
+                                          ),
+                                          TextButton(
+                                            child: Text(
+                                              "Login",
+                                              style: TextStyle(
+                                                  fontSize: 16
+                                              ),
+                                            ),
+                                            onPressed: () {  },
+
+                                          )
+                                        ],
+                                      ),
+
                                     ],
                                   ),
                                 ),
