@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({Key ? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key ? key}) : super(key: key);
 
   @override
-  _SignUpPageState createState() => _SignUpPageState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _LoginPageState extends State<LoginPage> {
   TextEditingController nameController = TextEditingController();
   bool _obscureText = true;
 
@@ -61,7 +61,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                         style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(bottom: 16, top: 50),
+                                        padding: const EdgeInsets.only(bottom: 16, top: 80),
                                         child: TextFormField(
                                           controller: nameController,
                                           decoration: InputDecoration(
@@ -128,8 +128,6 @@ class _SignUpPageState extends State<SignUpPage> {
                                           obscureText: _obscureText,
                                         ),
                                       ),
-
-
                                       ElevatedButton(
                                         onPressed: () {
                                           // Action for sign up button
@@ -166,59 +164,6 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 }
-
-// class InputField extends StatefulWidget {
-//   InputField({
-//     Key? key,
-//     required this.controller,
-//     required this.hint,
-//     required this.label,
-//     this.suffixIcon,
-//     bool obscure = false,
-//     this.prefixIcon,
-//   }) : super(key: key);
-//
-//   final TextEditingController controller;
-//   final String hint;
-//   final String label;
-//   final Widget? suffixIcon;
-//   final Widget? prefixIcon;
-//
-//   @override
-//   State<InputField> createState() => _InputFieldState();
-// }
-//
-// class _InputFieldState extends State<InputField> {
-//   bool obscure = false;
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.only(bottom: 16),
-//       child: TextFormField(
-//         controller: widget.controller,
-//         decoration: InputDecoration(
-//           border: OutlineInputBorder(
-//             borderRadius: BorderRadius.circular(10.0),
-//           ),
-//           hintText: widget.hint,
-//           labelText: widget.label,
-//           suffixIcon: IconButton(
-//             onPressed: () {
-//               setState(() {
-//                 obscure = !obscure;
-//               });
-//             },
-//             icon: Icon(obscure ? Icons.visibility_off : Icons.visibility),
-//           ),
-//           contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-//         ),
-//         textInputAction: TextInputAction.next,
-//         obscureText: obscure,
-//       ),
-//     );
-//   }
-// }
 
 
 
